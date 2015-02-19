@@ -8,15 +8,27 @@ import java.util.ArrayList;
 public class Contacts {
     private ArrayList<BaseContact> contacts = new ArrayList<BaseContact>();
 
+    public Contacts(){
+        SQLHandler sqlHandler = new SQLHandler();
+        contacts.addAll(sqlHandler.loadInternal());
+        contacts.addAll(sqlHandler.loadExternal());
+    }
+
     public ArrayList<BaseContact> getContacts() {
         return contacts;
     }
 
     public void AddInternalContact(String name, String phone, String email, String department) {
-        contacts.add(new Internal(name, phone, email, department));
+        Internal internal = new Internal(name, phone, email, department)
+        contacts.add(internal);
+        SQLHandler sqlHandler = new SQLHandler();
+        sqlHandler.insertInternal(internal);
     }
 
     public void AddExternalContact(String name, String phone, String email, String company) {
-        contacts.add(new External(name, phone, email, company));
+        External external = new External(name, phone, email, company);
+        contacts.add(external);
+
+
     }
 }

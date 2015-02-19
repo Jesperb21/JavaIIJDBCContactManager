@@ -21,11 +21,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../sqlite-jdbc-3.8.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/sqlite-jdbc-3.8.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../sqlite-jdbc-3.8.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/sqlite-jdbc-3.8.7.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
